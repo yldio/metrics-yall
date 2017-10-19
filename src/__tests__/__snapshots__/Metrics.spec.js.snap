@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders <Metrics /> without throwing 1`] = `
+<div
+  style="width:100%;height:100%"
+>
+  <canvas />
+</div>
+`;
