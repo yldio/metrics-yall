@@ -1,4 +1,4 @@
-![metrics-yall logo](https://i.imgur.com/T1uJKdx.png)
+![metrics-yall logo](https://i.imgur.com/0xMQJHo.png)
 
 [![Build Status](https://travis-ci.org/yldio/metrics-yall.svg?branch=master)](https://travis-ci.org/yldio/metrics-yall)
 [![Greenkeeper badge](https://badges.greenkeeper.io/yldio/metrics-yall.svg)](https://greenkeeper.io/)
@@ -19,11 +19,63 @@ yarn add metrics-yall
 ### Use
 
 ```js static
-const Network = () =>
-    <Topology services={services} primaryColor="#BADA55" />
+import { Metrics } from 'metrics-yall';
+
+const data = [
+  {
+    start: '2017-10-05 13:12:13',
+    end: '2017-10-05 13:13:58',
+    name: 'One Thing',
+    metrics: [
+      {
+        time: '2017-10-05 13:12:28',
+        value: 97595392,
+      },
+      {
+        time: '2017-10-05 13:12:43',
+        value: 94142464,
+      },
+      {
+        time: '2017-10-05 13:12:58',
+        value: 63918080,
+      }
+    ],
+  },
+  {
+    start: '2017-10-05 13:12:13',
+    end: '2017-10-05 13:13:58',
+    name: 'Another Thing',
+    metrics: [
+      {
+        time: '2017-10-05 13:12:28',
+        value: 99844096,
+      },
+      {
+        time: '2017-10-05 13:12:43',
+        value: 93655040,
+      },
+      {
+        time: '2017-10-05 13:12:58',
+        value: 64172032,
+      },
+      {
+        time: '2017-10-05 13:13:13',
+        value: 100237312,
+      }
+    ],
+  }
+]
+
+const Graph = () =>
+    <Metrics 
+        metrics={data}
+        width="100%"
+        height="100%"
+        legend={true}
+    />
 
 
-export default Network;
+export default Graph;
 ```
 
 ### Contribute
@@ -44,5 +96,3 @@ yarn start
 ### License
 
 [MPL-2.0](LICENSE)
-
-Icon: Line Graph by Meaghan Hendricks from the Noun Project
