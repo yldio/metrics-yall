@@ -28,16 +28,19 @@
     "redux-form": "^7.1.1",
     "remcalc": "^1.0.9",
     "styled-components": "^2.2.1",
-    "styled-is": "^1.1.0"
+    "styled-is": "^1.1.0",
+    "uglifyjs-webpack-plugin": "^1.0.0-beta.3"
   },
   "scripts": {
     "start": "styleguidist server",
     "build": "styleguidist build",
     "lint:js": "eslint src",
+    "size": "bundlesize",
     "jest": "jest --env=jsdom",
-    "test": "run-s lint:js lint:css jest",
+    "test": "run-s lint:js lint:css jest size",
     "lint:css": "stylelint './src/**/*.js'",
-    "precommit": "lint-staged"
+    "precommit": "npm run compile && lint-staged",
+    "compile": "NODE_ENV=production webpack"
   },
   "devDependencies": {
     "babel-loader": "^7.1.2",
@@ -79,7 +82,9 @@
     "stylelint": "^8.2.0",
     "stylelint-config-joyent-portal": "^2.0.1",
     "svg-inline-loader": "^0.8.0",
-    "url-loader": "^0.6.2"
+    "url-loader": "^0.6.2",
+    "webpack": "^3.8.1",
+    "webpack-bundle-analyzer": "^2.9.0"
   },
   "lint-staged": {
     "src/**/*.js": [
@@ -89,6 +94,12 @@
       "git add -A"
     ]
   },
+  "bundlesize": [
+    {
+      "path": "./lib/bundle.js",
+      "maxSize": "139 kB"
+    }
+  ],
   "jest": {
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",

@@ -1,5 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Renders <Metrics /> with chart colors 1`] = `
+<div
+  style="width:500px;height:500px"
+>
+  <canvas />
+</div>
+`;
+
+exports[`Renders <Metrics /> with legend 1`] = `
+<div
+  style="width:500px;height:500px"
+>
+  <canvas />
+</div>
+`;
+
+exports[`Renders <Metrics /> with legend 2`] = `
+<div
+  style="width:500px;height:500px"
+>
+  <canvas />
+</div>
+`;
+
+exports[`Renders <Metrics /> with title 1`] = `
+<div
+  style="width:500px;height:500px"
+>
+  <canvas />
+</div>
+`;
+
+exports[`Renders <Metrics /> with unit 1`] = `
+<div
+  style="width:500px;height:500px"
+>
+  <canvas />
+</div>
+`;
+
 exports[`Renders <Metrics /> without throwing 1`] = `
 <div
   style="width:100%;height:100%"

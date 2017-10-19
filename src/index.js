@@ -1,2 +1,5 @@
-export { default as Metrics } from './graph';
-export { default as GraphTitle } from './title';
+import Metrics from './graph';
+import { default as GraphTitle } from './title';
+
+export default Metrics;
+export { GraphTitle };

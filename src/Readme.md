@@ -1,5 +1,5 @@
 ```
-const { Metrics } = require('./');
+const Metrics = require('./').default;
 const data = require('./data/index.js').default;
 <Metrics 
     metrics={data} 
@@ -9,4 +9,3 @@ const data = require('./data/index.js').default;
     legend={true}
  />
 ```
-wut

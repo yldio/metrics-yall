@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Chart from 'chart.js';
 import { processProps } from './utils';
 
-class MetricGraph extends Component {
+class Metrics extends Component {
   componentDidMount() {
     const { xMin, xMax, datasets } = processProps(this.props);
     const {
@@ -90,7 +90,7 @@ class MetricGraph extends Component {
   }
 }
 
-MetricGraph.propTypes = {
+Metrics.propTypes = {
   /**
    * Data
    */
@@ -128,7 +128,7 @@ MetricGraph.propTypes = {
   unit: PropTypes.oneOf(['minute', 'millisecond', 'second', 'hour'])
 };
 
-MetricGraph.defaultProps = {
+Metrics.defaultProps = {
   height: 500,
   width: 500,
   legend: false,
@@ -146,4 +146,4 @@ MetricGraph.defaultProps = {
   tooltips: false
 };
 
-export default MetricGraph;
+export default Metrics;
