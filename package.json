@@ -39,8 +39,10 @@
     "jest": "jest --env=jsdom",
     "test": "run-s lint:js lint:css jest size",
     "lint:css": "stylelint './src/**/*.js'",
-    "precommit": "npm run compile && lint-staged",
-    "compile": "NODE_ENV=production webpack"
+    "precommit": "lint-staged",
+    "compile": "NODE_ENV=production webpack",
+    "postinstall": "npm run compile",
+    "prepublish": "npm run compile"
   },
   "devDependencies": {
     "babel-loader": "^7.1.2",
