@@ -2,7 +2,7 @@
   "name": "metrics-yall",
   "version": "0.1.2",
   "author": "YLD",
-  "main": "lib/bundle.js",
+  "main": "src/index.js",
   "license": "MPL-2.0",
   "dependencies": {
     "babel-plugin-transform-react-remove-prop-types": "^0.4.10",
