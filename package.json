@@ -1,8 +1,8 @@
 {
-  "name": "react-topology",
+  "name": "metrics-yall",
   "version": "0.1.1",
   "author": "YLD",
-  "main": "src/index.js",
+  "main": "lib/bundle.js",
   "license": "MPL-2.0",
   "dependencies": {
     "babel-plugin-transform-react-remove-prop-types": "^0.4.10",
