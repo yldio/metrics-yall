@@ -16,32 +16,7 @@ module.exports = {
   title: 'Metrics Y\'all',
   showUsage: true,
   showSidebar: false,
-  webpackConfig: Object.assign(webpackConfig, {
-    module: Object.assign(webpackConfig.module, {
-      rules: [
-        {
-          test: /\.svg$/,
-          loader: 'svg-inline-loader'
-        },
-        {
-          test: /\.css$/,
-          use: ['style-loader', 'css-loader']
-        },
-        {
-          test: /\.(js|jsx)$/,
-          use: ['babel-loader']
-        }
-        {
-          test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-          loader: 'url-loader',
-          options: {
-            limit: 10000,
-            name: 'static/media/[name].[hash:8].[ext]'
-          }
-        }
-      ]
-    })
-  }),
+  webpackConfig,
   handlers: componentPath =>
     defaultHandlers.concat(dnHandler.createDisplayNameHandler(componentPath))
 };
