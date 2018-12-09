@@ -1,7 +1,6 @@
 ![metrics-yall logo](https://i.imgur.com/0xMQJHo.png)
 
 [![Build Status](https://travis-ci.org/yldio/metrics-yall.svg?branch=master)](https://travis-ci.org/yldio/metrics-yall)
-[![Greenkeeper badge](https://badges.greenkeeper.io/yldio/metrics-yall.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 >  a binary function of a topological space which gives, for any two points of the space, a value equal to the distance between them, or to a value treated as analogous to distance for the purpose of analysis.
